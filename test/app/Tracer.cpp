@@ -30,9 +30,9 @@ void Tracer::run() {
   }
   rCount = rightWheel.getCount();
   lCount = leftWheel.getCount();
-  sprintf(buf, "rCount=%d", rCount);
-  sprintf(buf, "rCount=%d", rCount);
-  _log(buf);
+  // sprintf(buf, "rCount=%d", rCount);
+  // sprintf(buf, "rCount=%d", rCount);
+  // _log(buf);
   brightness = colorSensor.getBrightness();
   diff = (brightness - mThreshold) * 1.1;
 
