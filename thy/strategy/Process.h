@@ -1,4 +1,5 @@
 #include "Scene.h"
+#include "DivergentScene.h"
 #include "TouchSensor.h"
 
 using namespace ev3api;
@@ -12,7 +13,6 @@ private:
     Scene* scene_ = nullptr;
     TouchSensor touchSensor_ = TouchSensor(PORT_1);
     void setup();
-    // ブロック配置のパターン数に応じて対応していく
     Scene* getScenePattern1();
     Scene* getScenePattern2();
     Scene* getScenePattern3();

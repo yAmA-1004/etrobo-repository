@@ -36,7 +36,7 @@ void Process::exec() {
   // シーンの実行
   if (scene_->exec()) {
       // シーンが終了したら次のシーンをセット
-      ev3_speaker_play_tone(NOTE_D4, 100);  // 音で知らせる
+      // ev3_speaker_play_tone(NOTE_D4, 100);  // 音で知らせる
       scene_ = scene_->getNext();
   }
 }

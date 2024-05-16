@@ -11,7 +11,7 @@ public:
     static int black_g;
     static int black_b;
     static int block_pattern;
-    static bool block;
+    static bool red_block_found;
 };
 
 #endif

@@ -7,6 +7,7 @@ util.o \
 Process.o \
 ProcessSetup.o \
 Scene.o \
+DivergentScene.o \
 Env.o \
 Device.o \
 Action.o \
@@ -19,6 +20,10 @@ DistanceMonitor.o \
 AngleMonitor.o \
 BlackLineMonitor.o \
 BlueLineMonitor.o \
+YellowLineMonitor.o \
+GreenLineMonitor.o \
+RedLineMonitor.o \
+RedBlockMonitor.o \
 
 SRCLANG := c++
 
