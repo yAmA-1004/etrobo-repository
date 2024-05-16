@@ -1,8 +1,7 @@
 #include "DistanceMonitor.h"
 
-DistanceMonitor::DistanceMonitor(float target, int from) {
+DistanceMonitor::DistanceMonitor(float target) {
     target_ = target;
-    from_ = from;
 }
 
 bool DistanceMonitor::check() {
@@ -25,6 +24,9 @@ bool DistanceMonitor::check() {
     last_right_angle_ = right_angle;
 
     // 走行距離が目標値に達したら真を返す
-    // 比較の方向が1ならば上から比較(下回ったら到達)、-1ならば下から比較(上回ったら到達)
-    return distance_ * from_ < target_ * from_; 
+    if (target_ > 0) {
+        return distance_ > target_;
+    } else {
+        return distance_ < target_;
+    }
 }

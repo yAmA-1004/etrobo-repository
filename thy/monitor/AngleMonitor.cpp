@@ -1,8 +1,7 @@
 #include "AngleMonitor.h"
 
-AngleMonitor::AngleMonitor(float target, int from) {
+AngleMonitor::AngleMonitor(float target) {
     target_ = target;
-    from_ = from;
 }
 
 bool AngleMonitor::check() {
@@ -23,6 +22,9 @@ bool AngleMonitor::check() {
     last_right_angle_ = right_angle;
 
     // 走行角度が目標値に達したら真を返す
-    // 比較の方向が1ならば上から比較(下回ったら到達)、-1ならば下から比較(上回ったら到達)
-    return angle_ * from_ < target_ * from_;
+    if (target_ > 0) {
+        return angle_ > target_;
+    } else {
+        return angle_ < target_;
+    }
 }
