@@ -639,7 +639,7 @@ void Process::setup() {
 // 	Scene* curve2_scene = new Scene(line_trace_rightcurve_action, new AngleMonitor(80), big_loop_entry_scene);//ラップ前curve曲率走行に
 // 	Scene* strait2_scene = new Scene(line_trace_right_action, new DistanceMonitor(1640), curve2_scene);//２つ目の直線//全国では外側走行にしたい。soto
 // 	Scene* curve_scene = new Scene(line_trace_rightcurve_action, new AngleMonitor(80), strait2_scene);//curve全国では曲率走行に
-	Scene* start_scene = new Scene(line_trace_right_action2, blue_line_monitor, stop_scene);//直線//uchi
+	Scene* start_scene = new Scene(line_trace_right_action, blue_line_monitor, stop_scene);//直線//uchi
   // 開始シーン
   // scene_ = block_entry_scene;
   // ブロックdeトレジャーから始める場合
