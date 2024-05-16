@@ -5,6 +5,10 @@
 #include "DistanceMonitor.h"
 #include "BlackLineMonitor.h"
 #include "BlueLineMonitor.h"
+#include "YellowLineMonitor.h"
+#include "GreenLineMonitor.h"
+#include "RedLineMonitor.h"
+#include "RedBlockMonitor.h"
 #include "ArmMonitor.h"
 #include "AngleMonitor.h"
 
