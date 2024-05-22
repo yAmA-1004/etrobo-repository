@@ -1,5 +1,6 @@
 #include "Tracer.h" // <1>
 #include "ColorSensor.h"
+#include <stdio.h>
 
 // static FILE *bt = NULL;
 rgb_raw_t rgb;
@@ -22,8 +23,7 @@ void Tracer::run() {
   // fprintf(bt, "R:%d G:%d B:%d\r\n", rgb.r, rgb.g, rgb.b);
   //  fprintf(bt, "%d\r\n",colorSensor.getBrightness());
   //  fprintf(bt, "%d\r\n",colorSensor.getColorNumber());
-  sprintf(str, "R:%d G:%d B:%d", rgb.r, rgb.g, rgb.b);
-  hub_display_text_scroll(str, 100);
+  printf("R:%d G:%d B:%d\n", rgb.r, rgb.g, rgb.b);
 
   msg_f("running...", 1);
 }
